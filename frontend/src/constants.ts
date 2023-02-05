@@ -1,0 +1,9 @@
+export const EMAIL = 'Email';
+export const GUESSER = 'Guesser';
+export const UNEXPECTED_ERROR = 'Unexpected Error:';
+export const GENERATE_EMAILS = 'Try Generating Emails for Users';
+export const DOMAIN = 'Enter Company Domain';
+export const FULLNAME = 'Enter Full Name';
+export const GENERATE = 'GENERATE';
+export const RESULT = 'RESULT';
+export const ENTER_VALID = 'ENTER VALID';
