@@ -109,6 +109,9 @@ export const FlexItemForm = styled.div`
    transition: 0.6s;
    transform: translate(0);
    font-weight: 400;
+   box-shadow: 0 0 1em 0.25em ${({ theme }) => theme.downloadButton};
+  0 0.4em 1em ${({ theme }) => theme.glowColor};,
+  inset 0 0 0.75em 0.25em ${({ theme }) => theme.downloadButton};
 
    &:hover {
     color:  #ffffff;
@@ -154,6 +157,8 @@ export const FlexItem = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+    background: #fff;
+    opacity: 0.5;
 `;
 
 export const FormComponent = styled.form`
@@ -166,7 +171,7 @@ export const FormLabel = styled.label`
     flex-flow: column;
     font-size: 16px;
     font-weight: 500;
-    margin-bottom: 2em;
+    margin-bottom: 0.75em;
 `;
 
 export const FormButtonComponent = styled.button`
@@ -191,7 +196,7 @@ export const FormButtonComponent = styled.button`
         border-color: #6A679E;
         outline: none;
         color: #FFF;
-        background: #ff5252; ${({ theme }) => theme.formButtonHoverColor}
+        background: ${({ theme }) => theme.formButtonHoverColor}
     }
 `;
 

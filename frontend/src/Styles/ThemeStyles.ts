@@ -1,5 +1,5 @@
 export const lightTheme = {
-  headerBackground: '#ffffff',
+  headerBackground: '#FFF',
   titleTextColor: '#000',
   bodyBackgroundColor: '#f7f1e3',
   bodyPolynomialOne: '#6C63AC',
@@ -38,5 +38,5 @@ export const darkTheme = {
   background: 'rgba(65, 243, 243, 0.781)',
   glowColor: 'rgba(65, 243, 243, 0.781)',
   downloadButton: 'rgb(110, 237, 237)',
-  outputText: '#ffffff',
+  outputText: '#000',
 };

@@ -32,19 +32,19 @@ const CheckBox = styled.input`
   width: 42px;
   height: 26px;
   &:checked + ${CheckBoxLabel} {
-    background: rgba(65, 243, 243, 0.781);
-    box-shadow: 0 0 1em 0.25em ${({ theme }) => theme.downloadButton};
-    0 0.4em 1em ${({ theme }) => theme.glowColor};,
-    inset 0 0 0.75em 0.25em ${({ theme }) => theme.downloadButton};
-    &::after {
-      content: "";
-      display: block;
-      border-radius: 50%;
-      width: 18px;
-      height: 18px;
-      margin-left: 21px;
-      transition: 0.2s;
-    }
+  background: rgba(65, 243, 243, 0.781);
+  box-shadow: 0 0 1em 0.25em ${({ theme }) => theme.downloadButton};
+  0 0.4em 1em ${({ theme }) => theme.glowColor};,
+  inset 0 0 0.75em 0.25em ${({ theme }) => theme.downloadButton};
+  &::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    margin-left: 21px;
+    transition: 0.2s;
+  }
   }
 `;
 
@@ -55,7 +55,13 @@ const ThemeToggler = ({ theme, toggleTheme }) => {
   const checked = theme === 'dark';
   return (
     <CheckBoxWrapper>
-      <CheckBox onChange={handleChange} id="checkbox" type="checkbox" onClick={toggleTheme} checked={checked} />
+      <CheckBox
+        onChange={handleChange} 
+        id="checkbox" 
+        type="checkbox" 
+        data-testid="toggleCheckBox"
+        onClick={toggleTheme} 
+        checked={checked} />
       <CheckBoxLabel htmlFor="checkbox" />
     </CheckBoxWrapper>
   );

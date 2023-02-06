@@ -34,7 +34,7 @@ const BodyComponent: React.FC = () => {
     }
     switch (fieldName) {
       case FULL_NAME:
-        return value.match(/^[a-zA-Z ]*/) !== null;
+        return value.match(/^[A-Za-z]+([\ A-Za-z]+)*/) !== null;
       case DOMAIN:
         return value.match(/^[A-Za-z0-9]+\.[A-Za-z]+$/) !== null;
       default:
@@ -44,9 +44,8 @@ const BodyComponent: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    reset();
-    const fullName : string = event?.target.fullName?.value;
-    const companyDomain : string = event?.target.domain?.value;
+    const fullName : string = event?.target?.[FULL_NAME]?.value;
+    const companyDomain : string = event?.target?.[DOMAIN]?.value;
     const isNameValid : boolean = validateField(FULL_NAME, fullName);
 
     if (!isNameValid) {
@@ -81,8 +80,9 @@ const BodyComponent: React.FC = () => {
         }),
       );
     }
-
+    console.log(isNameValid)
     if (isNameValid && isDomainValid) {
+      reset();
       getAPIData(fullName, companyDomain);
     }
   };
@@ -100,11 +100,11 @@ const BodyComponent: React.FC = () => {
       <Styles.FlexContainerParent>
         <Styles.FlexComponentContainer>
           <Styles.FlexItemForm>
-            <Styles.FormComponent onSubmit={handleSubmit}>
+            <Styles.FormComponent data-testid="form" onSubmit={handleSubmit}>
               <Styles.FormHeader>
                 {CONSTANTS.EMAIL}
                 {' '}
-                <span>{CONSTANTS.GUESSER}</span>
+                {CONSTANTS.GUESSER}
               </Styles.FormHeader>
               <p>{CONSTANTS.GENERATE_EMAILS}</p>
               <Styles.FormLabel>
@@ -113,6 +113,8 @@ const BodyComponent: React.FC = () => {
                   type="text"
                   value={name}
                   name={FULL_NAME}
+                  data-testid="nameInput"
+                  autoComplete="off"
                   onChange={(e) => onInputChange(e, FULL_NAME)}
                 />
                 {validationError?.fullName
@@ -124,22 +126,26 @@ const BodyComponent: React.FC = () => {
                   type="text"
                   value={domain}
                   name={DOMAIN}
+                  data-testid="domainInput"
+                  autoComplete="off"
                   onChange={(e) => onInputChange(e, DOMAIN)}
                 />
                 {validationError?.domain
                     && <Styles.ErrorLine>{[validationError.domain]}</Styles.ErrorLine>}
               </Styles.FormLabel>
-              <Styles.FormButtonComponent type="submit">{CONSTANTS.GENERATE}</Styles.FormButtonComponent>
+              <Styles.FormButtonComponent 
+                  data-testid="generateButton"
+                  type="submit">
+                    {CONSTANTS.GENERATE}
+              </Styles.FormButtonComponent>
             </Styles.FormComponent>
           </Styles.FlexItemForm>
-          <Styles.FlexItem>
+          {emailData && <Styles.FlexItem>
             <Styles.Output>
-              {CONSTANTS.RESULT}
-              <br />
               {emailError && <Styles.ErrorComponent>{emailError}</Styles.ErrorComponent>}
               <Styles.Fade out={loading}>{emailData?.email}</Styles.Fade>
             </Styles.Output>
-          </Styles.FlexItem>
+          </Styles.FlexItem>}
         </Styles.FlexComponentContainer>
         <Background />
       </Styles.FlexContainerParent>

@@ -28,7 +28,7 @@ const HeaderTitle = styled.div`
 
 const HeaderComponent = ({ theme, themeToggler }) => (
   <HeaderContainer>
-    <HeaderTitle>
+    <HeaderTitle data-testid="headerTitle">
       {CONSTANTS.EMAIL}
       {' '}
       {CONSTANTS.GUESSER}
