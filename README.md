@@ -97,7 +97,7 @@ Screens:
 
 This Project contains Node API for Email Guesser App.
 
- - Author
+**Author**
 Anshul Surana - surana.anshul@gmail.com
 
 ## Prerequisites
@@ -117,9 +117,9 @@ Anshul Surana - surana.anshul@gmail.com
     npm run test
 
 ## End point
-*GET /api/v1/generateEmail*
+* GET /api/v1/generateEmail*
     - generate email from fullname and domain
-*GET /healthcheck*
+* GET /healthcheck*
     - health check api 
 
 
@@ -127,7 +127,7 @@ Anshul Surana - surana.anshul@gmail.com
 
 This is Front end application for Email Guesser app. This is a single page application that has two input field and outputs generates email.
 
-## Author
+ **Author**
 Anshul Surana - surana.anshul@gmail.com
 
 ## Prerequisites
