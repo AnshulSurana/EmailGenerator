@@ -5,7 +5,7 @@ const useDarkMode = () => {
   const localThemeFallback = localHour > 8 && localHour < 18 ? 'light' : 'dark';
   const [theme, setTheme] = useState(localThemeFallback);
   const [mountedComponent, setMountedComponent] = useState(false);
-  const setMode = (mode) => {
+  const setMode = (mode: string) => {
     window.sessionStorage.setItem('theme', mode);
     setTheme(mode);
   };
