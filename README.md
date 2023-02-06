@@ -3,14 +3,9 @@
 Email Guesser is a simple application. The UI accepts the full name and company domain and display the derived email address.
 and backend is a HTTP micro service with a single end point to derive email address for a person, given their full name and company domain
 
-
-## Project can further be enhanced - 
-* 1: a file uploader can be implemented as a set of data to generate emails from.
-* 2: emails can be stored in DB.
-
 ## Project setup
 
-This project consist of two separate applications backend and frontend.this setup is particularly created in order to demonstrate two separate deployments. The project consists of tests using Jest and react testing library,  the reports of which can be published after running test command.
+This project consist of two separate applications backend and frontend. This setup is particularly created in order to demonstrate two separate deployments. The project consists of tests using Jest and react testing library, the reports of which can be published after running test command.
 
 ## Application Structure
 
@@ -58,13 +53,16 @@ git clone https://github.com/AnshulSurana/EmailGenerator.git;
 cd EmailGenerator;
 ```
 
-After getting the project
+After getting into the project -  run these two commands in separate terminal
 
+for backend run
 ```
 cd backend
 npm install
 npm start
 ```
+
+for frontend run
 ```
 cd frontend
 npm install
@@ -79,7 +77,7 @@ Screens:
 
 
 ## The project is based on some base assumptions - 
-* 1 : it generates domain valid only from `
+* it generates domain valid only from `
     {
     "Jane Doe": "jdoe@babbel.com",
     "Jay Arun": "jayarun@linkedin.com",
@@ -88,9 +86,12 @@ Screens:
     "Marta Dahl": "mdahl@babbel.com",
     "Vanessa Boom": "vboom@babbel.com"
     }
-* 2: It only considers first two words as first name and last name.`
-* 3: Validation is restricted to empty field and domain regex expressions.
+* It only considers first two words as first name and last name.`
+* Validation is restricted to empty field and domain regex expressions.
 
+## Project can further be enhanced - 
+*  a file uploader can be implemented as a set of data to generate emails from.
+*  emails can be stored in DB.
 
 # Backend 
 
@@ -125,7 +126,6 @@ Anshul Surana - surana.anshul@gmail.com
 # FrontEnd
 
 This is Front end application for Email Guesser app. This is a single page application that has two input field and outputs generates email.
-
 
 ## Author
 Anshul Surana - surana.anshul@gmail.com
