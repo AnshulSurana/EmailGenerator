@@ -1,32 +1,15 @@
 # EmailGenerator
 
-Email Guesser is a simple application the UI to accept the full name and company domain and display the derived email address.
-and backend is a HTTP micro service with a single end point to derive email address for a person, given their full name and company domain.
-
-## The project is based on some base points - 
-* 1 : it generates domain valid only from `
-    {
-    "Jane Doe": "jdoe@babbel.com",
-    "Jay Arun": "jayarun@linkedin.com",
-    "David Stein": "davidstein@google.com",
-    "Mat Lee": "matlee@google.com",
-    "Marta Dahl": "mdahl@babbel.com",
-    "Vanessa Boom": "vboom@babbel.com"
-    }
-* 2: It only considers first two words as first name and last name.`
-* 3: Validation is restricted to empty field and domain regex expressions.
-
-## Project can further be enhanced - 
-* 1: a file uploader can be implemented as a set of data to generate emails from.
-* 2: emails can be stored in DB.
+Email Guesser is a simple application. The UI accepts the full name and company domain and display the derived email address.
+and backend is a HTTP micro service with a single end point to derive email address for a person, given their full name and company domain
 
 ## Project setup
 
-This project consist of two separate applications backend and frontend.this setup is particularly created in order to demonstrate two separate deployments.
+This project consist of two separate applications backend and frontend. This setup is particularly created in order to demonstrate two separate deployments. The project consists of tests using Jest and react testing library, the reports of which can be published after running test command.
 
 ## Application Structure
 
-```bash
+```
 ├── backend
     - src
         - controller
@@ -70,13 +53,16 @@ git clone https://github.com/AnshulSurana/EmailGenerator.git;
 cd EmailGenerator;
 ```
 
-After getting the project
+After getting into the project -  run these two commands in separate terminal
 
+for backend run
 ```
 cd backend
 npm install
 npm start
 ```
+
+for frontend run
 ```
 cd frontend
 npm install
@@ -90,11 +76,29 @@ Screens:
 ![Screen](/frontend/assets/3.png)
 
 
+## The project is based on some base assumptions - 
+* it generates domain valid only from `
+    {
+    "Jane Doe": "jdoe@babbel.com",
+    "Jay Arun": "jayarun@linkedin.com",
+    "David Stein": "davidstein@google.com",
+    "Mat Lee": "matlee@google.com",
+    "Marta Dahl": "mdahl@babbel.com",
+    "Vanessa Boom": "vboom@babbel.com"
+    }
+* It only considers first two words as first name and last name.`
+* Validation is restricted to empty field and domain regex expressions.
+* This is designed for laptop views, mobile will look a bit small.
+
+## Project can further be enhanced - 
+*  a file uploader can be implemented as a set of data to generate emails from.
+*  emails can be stored in DB.
+
 # Backend 
 
 This Project contains Node API for Email Guesser App.
 
- - Author
+**Author**
 Anshul Surana - surana.anshul@gmail.com
 
 ## Prerequisites
@@ -114,16 +118,15 @@ Anshul Surana - surana.anshul@gmail.com
     npm run test
 
 ## End point
-*GET /api/v1/generateEmail*
+* GET /api/v1/generateEmail*
     - generate email from fullname and domain
-*GET /healthcheck*
+* GET /healthcheck*
     - health check api 
 
 
 # FrontEnd
 
 This is Front end application for Email Guesser app. This is a single page application that has two input field and outputs generates email.
-
 
 ## Author
 Anshul Surana - surana.anshul@gmail.com
