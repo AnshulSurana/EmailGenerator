@@ -1,10 +1,10 @@
-###### EmailGenerator
+# EmailGenerator
 
 Email Guesser is a simple application the UI to accept the full name and company domain and display the derived email address.
 and backend is a HTTP micro service with a single end point to derive email address for a person, given their full name and company domain.
 
-# The project is based on some base points - 
-1 : it generates domain valid only from `
+## The project is based on some base points - 
+* 1 : it generates domain valid only from `
     {
     "Jane Doe": "jdoe@babbel.com",
     "Jay Arun": "jayarun@linkedin.com",
@@ -13,18 +13,18 @@ and backend is a HTTP micro service with a single end point to derive email addr
     "Marta Dahl": "mdahl@babbel.com",
     "Vanessa Boom": "vboom@babbel.com"
     }
-2: It only considers first two words as first name and last name.`
-3: Validation is restricted to empty field and domain regex expressions.
+* 2: It only considers first two words as first name and last name.`
+* 3: Validation is restricted to empty field and domain regex expressions.
 
-# Project can further be enhanced - 
-1: a file uploader can be implemented as a set of data to generate emails from.
-2: emails can be stored in DB.
+## Project can further be enhanced - 
+* 1: a file uploader can be implemented as a set of data to generate emails from.
+* 2: emails can be stored in DB.
 
-# Project setup
+## Project setup
 
 This project consist of two separate applications backend and frontend.this setup is particularly created in order to demonstrate two separate deployments.
 
-# Application Structure
+## Application Structure
 
 ```bash
 ├── backend
@@ -57,6 +57,7 @@ This project consist of two separate applications backend and frontend.this setu
     - webpack.config //. webpack config for bundling
 
 
+```
 # Install, Configure & Run
 
 Below mentioned are the steps to install, configure & run in your platform/distributions. from github
@@ -84,19 +85,19 @@ npm start
 
 Screens:
 
-[Task](/frontend/assets/1.png)
-[Task](/frontend/assets/2.png)
-[Task](/frontend/assets/3.png)
+![Screen](/frontend/assets/1.png)
+![Screen](/frontend/assets/2.png)
+![Screen](/frontend/assets/3.png)
 
 
-## Backend 
+# Backend 
 
 This Project contains Node API for Email Guesser App.
 
  - Author
 Anshul Surana - surana.anshul@gmail.com
 
-# Prerequisites
+## Prerequisites
 
 ```
     Node >= 18
@@ -109,17 +110,17 @@ Anshul Surana - surana.anshul@gmail.com
     Node - https://nodejs.org/dist/latest-v18.x/docs/api/
     and https://developer.mozilla.org/en-US/
 
-# Unit Tests
+## Unit Tests
     npm run test
 
-# End point
+## End point
 *GET /api/v1/generateEmail*
     - generate email from fullname and domain
 *GET /healthcheck*
     - health check api 
 
 
-## FrontEnd
+# FrontEnd
 
 This is Front end application for Email Guesser app. This is a single page application that has two input field and outputs generates email.
 
@@ -127,7 +128,7 @@ This is Front end application for Email Guesser app. This is a single page appli
 ## Author
 Anshul Surana - surana.anshul@gmail.com
 
-# Prerequisites
+## Prerequisites
 - Node >= 18
 - NPM >= 8
 
