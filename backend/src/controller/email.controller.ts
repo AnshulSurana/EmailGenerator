@@ -31,9 +31,9 @@ export async function getEmailsHandler(req: Request, res: Response) {
     log.info('Request to generate Email with query params',req.query);
     const fullName = req.query.fullName;
     const companyDomain = req.query.domain;
-
+    const companyDomainLowerCase = companyDomain.toLowerCase();
      // Check if the company domain is present in the sample data
-    const matchedEmail = Object.values(data).find((email: string) => email.endsWith(`@${companyDomain}`));
+    const matchedEmail = Object.values(data).find((email: string) => email.endsWith(`@${companyDomainLowerCase}`));
     const matchedName = Object.keys(data).find(name => data[name] === matchedEmail);
     
     // send error if domain not found in sample data
@@ -53,9 +53,9 @@ export async function getEmailsHandler(req: Request, res: Response) {
     const lastNameLowerCase = lastName.toLowerCase();
 
     if (format === constant.FULLNAME_DOMAIN) {
-        email = `${firstNameLowerCase}${lastNameLowerCase}@${companyDomain}`
+        email = `${firstNameLowerCase}${lastNameLowerCase}@${companyDomainLowerCase}`
     } else if (format === constant.FIRST_NAME_INITIAL_DOMAIN){
-        email = `${firstNameLowerCase.substring(0,1)}${lastNameLowerCase}@${companyDomain}`
+        email = `${firstNameLowerCase.substring(0,1)}${lastNameLowerCase}@${companyDomainLowerCase}`
     }
     log.info('Succesfully generated email');
     return res.status(200).send({email});

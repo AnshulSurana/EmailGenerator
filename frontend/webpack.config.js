@@ -32,33 +32,11 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [ 'style-loader', 'css-loader' ],
-            },
-            {
-                test: /\.svg$/,
-                use: ['@svgr/webpack'],
-            },
-            {
-                test: /\.svg$/,
-                use: [
-                    {
-                        loader: 'svg-react-loader',
-                        options: {
-                            limit: 10000,
-                            encoding: "base64",
-                            // fallback defaults to file-loader
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.ttf$/,
-                loader: "url-loader", // or directly file-loader
-                include: path.resolve(__dirname, "node_modules/react-native-vector-icons"),
-            },
+            }
         ],
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".jsx", ".css"],
+        extensions: [".ts", ".tsx", ".js", ".jsx"],
     },
     devtool: "eval-source-map",
     plugins: [
