@@ -1,20 +1,8 @@
 # EmailGenerator
 
-Email Guesser is a simple application the UI to accept the full name and company domain and display the derived email address.
-and backend is a HTTP micro service with a single end point to derive email address for a person, given their full name and company domain.
+Email Guesser is a simple application. The UI accepts the full name and company domain and display the derived email address.
+and backend is a HTTP micro service with a single end point to derive email address for a person, given their full name and company domain
 
-## The project is based on some base points - 
-* 1 : it generates domain valid only from `
-    {
-    "Jane Doe": "jdoe@babbel.com",
-    "Jay Arun": "jayarun@linkedin.com",
-    "David Stein": "davidstein@google.com",
-    "Mat Lee": "matlee@google.com",
-    "Marta Dahl": "mdahl@babbel.com",
-    "Vanessa Boom": "vboom@babbel.com"
-    }
-* 2: It only considers first two words as first name and last name.`
-* 3: Validation is restricted to empty field and domain regex expressions.
 
 ## Project can further be enhanced - 
 * 1: a file uploader can be implemented as a set of data to generate emails from.
@@ -22,11 +10,11 @@ and backend is a HTTP micro service with a single end point to derive email addr
 
 ## Project setup
 
-This project consist of two separate applications backend and frontend.this setup is particularly created in order to demonstrate two separate deployments.
+This project consist of two separate applications backend and frontend.this setup is particularly created in order to demonstrate two separate deployments. The project consists of tests using Jest and react testing library,  the reports of which can be published after running test command.
 
 ## Application Structure
 
-```bash
+```
 ├── backend
     - src
         - controller
@@ -88,6 +76,20 @@ Screens:
 ![Screen](/frontend/assets/1.png)
 ![Screen](/frontend/assets/2.png)
 ![Screen](/frontend/assets/3.png)
+
+
+## The project is based on some base assumptions - 
+* 1 : it generates domain valid only from `
+    {
+    "Jane Doe": "jdoe@babbel.com",
+    "Jay Arun": "jayarun@linkedin.com",
+    "David Stein": "davidstein@google.com",
+    "Mat Lee": "matlee@google.com",
+    "Marta Dahl": "mdahl@babbel.com",
+    "Vanessa Boom": "vboom@babbel.com"
+    }
+* 2: It only considers first two words as first name and last name.`
+* 3: Validation is restricted to empty field and domain regex expressions.
 
 
 # Backend 
