@@ -5,7 +5,6 @@ import { screen, render, waitFor, fireEvent } from '@testing-library/react';
 
 import ThemeToggler from '../../src/components/ThemeToggler';
 
-
 describe('Toggle component', () => {
     it('Should render Toggle Component and check its onclick', async () => {
         render(<ThemeToggler 

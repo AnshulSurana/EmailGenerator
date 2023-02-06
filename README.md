@@ -88,6 +88,7 @@ Screens:
     }
 * It only considers first two words as first name and last name.`
 * Validation is restricted to empty field and domain regex expressions.
+* This is designed for laptop views, mobile will look a bit small.
 
 ## Project can further be enhanced - 
 *  a file uploader can be implemented as a set of data to generate emails from.

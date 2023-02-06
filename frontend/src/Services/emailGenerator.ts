@@ -18,6 +18,7 @@ export interface EmailParts {
     domain: string;
 }
 
+// types
 type GetEmailsSuccessResponse = {
   isOk: boolean;
   data: Emails;
@@ -34,6 +35,12 @@ type GetEmailDetailsResponse =
   | GetEmailsSuccessResponse
   | GetEmailsErrorResponse;
 
+/**
+ * 
+ * @param name 
+ * @param domain 
+ * @returns returns rest responswe
+ */
 export const getEmailDetails = async (
   name: string,
   domain: string,

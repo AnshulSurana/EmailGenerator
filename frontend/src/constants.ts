@@ -6,4 +6,4 @@ export const DOMAIN = 'Enter Company Domain';
 export const FULLNAME = 'Enter Full Name';
 export const GENERATE = 'GENERATE';
 export const RESULT = 'RESULT';
-export const ENTER_VALID = 'ENTER VALID';
+export const ENTER_VALID = 'Enter Valid';
