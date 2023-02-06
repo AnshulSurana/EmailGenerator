@@ -128,7 +128,7 @@ Anshul Surana - surana.anshul@gmail.com
 
 This is Front end application for Email Guesser app. This is a single page application that has two input field and outputs generates email.
 
-## Author
+ **Author**
 Anshul Surana - surana.anshul@gmail.com
 
 ## Prerequisites
